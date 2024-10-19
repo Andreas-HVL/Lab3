@@ -74,36 +74,19 @@ namespace Lab3.Viewmodels
             
         }
 
-        private void SearchName(object parameter) // Searches for passes based on string input, if input is empty, returns all passes
-        {
-            if (string.IsNullOrEmpty(SearchQuery))
-            {
-                FilteredResults = new ObservableCollection<Pass>(BookedPasses);
-            }
-            else
-            {
-                FilteredResults = new ObservableCollection<Pass>(
-                   BookedPasses.Where(e => e.WorkoutType.Contains(SearchQuery, StringComparison.OrdinalIgnoreCase)));
-            }
-        }
-
-        private void SearchTime(TimeSpan timeResult) // Searches for passes based on Time input
-        {
-            FilteredResults = new ObservableCollection<Pass>(
-                BookedPasses.Where(e => e.Time.TimeOfDay.Hours == timeResult.Hours));
-        }
-
-        public void Search(object parameter) // Takes input from the search bar and invokes either the SearchName function or SearchTime Function depending on the input
+        // Takes input from the search bar and invokes either the SearchName function or SearchTime Function depending on the input
+        public void Search(object parameter)
         {
             if (DateTime.TryParseExact(SearchQuery, "HH", CultureInfo.InvariantCulture, DateTimeStyles.None, out DateTime result))
             {
-                SearchTime(result.TimeOfDay);
+                FilteredResults = PassSearchHelper.SearchByTime(BookedPasses, result.TimeOfDay);
             }
             else
             {
-                SearchName(SearchQuery);
+                FilteredResults = PassSearchHelper.SearchByName(BookedPasses, SearchQuery);
             }
         }
+
 
         private void UnbookingNotification(string input) //Used to print a MessageBox based on whether a pass was unbooked or not
         {

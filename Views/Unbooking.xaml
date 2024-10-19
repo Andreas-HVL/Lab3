@@ -21,8 +21,8 @@
             <Button Width="60" Height="35" Command="{Binding SearchCommand}">
                 Search
             </Button>
-            <TextBlock>
-        Enter hours (HH) or workout type
+            <TextBlock VerticalAlignment="Center">
+                 Enter hours (HH) or workout type
             </TextBlock>
         </StackPanel>
         <!-- List of booked passes -->
