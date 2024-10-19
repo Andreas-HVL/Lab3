@@ -13,13 +13,12 @@ In the future, it could serve as the interface between the program and a databas
 Currently, it instantiates dummy data, but this can easily be replaced by real-time data fetching in the future.
 
 //
-The RelayCommand and ObservableObject classes are key components of the MVVM pattern used in this program.
-RelayCommand allows binding of UI Actions (Such a Button Clicks) to methods in the ViewModel enabling interaction between componnts without tightly coupling UI to Logic
-ObservableObject simplifies notifications sent by updated properties via the INotifyPropertyChanged interface, ensurgin that changes made in the ViewModel are reflected in the Views.
-
-//
 As the Search Function is being used in 2 places (Booking/Unbooking) already, the base functionality was moved to a separate PassSearchHelper class.
 Here additional functions can be added in the future if needed and can be called anywhere in the program.
 
+//
+The RelayCommand and ObservableObject classes are key components of the MVVM pattern used in this program.
+RelayCommand allows binding of UI Actions (Such a Button Clicks) to methods in the ViewModel enabling interaction between components without tightly coupling UI to Logic
+ObservableObject simplifies notifications sent by updated properties via the INotifyPropertyChanged interface, ensurgin that changes made in the ViewModel are reflected in the Views.
 
 
