@@ -1,6 +1,6 @@
 # Report
 
-This program is written with the expectation of being the followup to a login-function to a Gym's website, so only a single user will be relevant, and as such has been called "John Doe" in the program as a placeholder.
+This program is written with the expectation of being the followup to a login-function to a Gym's website or a machine located in the gym, so only a single user will be relevant, and as such has been called "John Doe" in the program as a placeholder.
 This User class has a few basic functions allowing it to book and unbook passes, these can easily be expanded by adding more properties or functions to accomodate future requirements.
 
 //
