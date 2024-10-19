@@ -4,7 +4,7 @@ This program is written with the expectation of being the followup to a login-fu
 This User class has a few basic functions allowing it to book and unbook passes, these can easily be expanded by adding more properties or functions to accomodate future requirements.
 
 //
-The Pass class represents a gym session with basic information such as workout type, time, and available slots. 
+The Pass class represents a gym training session with basic information such as workout type, time, and available slots. 
 If additional information needs to be tracked (e.g., instructor name, equipment required), the class can easily be extended by adding new properties and methods
 
 //
