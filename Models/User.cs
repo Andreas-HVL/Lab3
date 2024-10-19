@@ -13,6 +13,8 @@ namespace Lab3.Models
     public class User : ObservableObject
     {
         public string Name { get; set; }
+
+        // List of passes on the user class to allow booking/unbooking on a per-user basis
         private List<Pass> _bookedPassList;
         public List<Pass> BookedPassList
         {
@@ -29,8 +31,10 @@ namespace Lab3.Models
             Name = name;
             BookedPassList = new List<Pass>();
         }
-        
-        public string BookPass(Pass input)
+
+
+        //Booking/Unbooking function, returns a string based on action taken, which is printed using a function in the ViewModel
+        public string BookPass(Pass input) 
         {
             foreach(Pass pass in BookedPassList)
             {

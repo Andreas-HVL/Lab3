@@ -20,9 +20,9 @@ namespace Lab3.Viewmodels
     {
         public User _user {  get; set; }
         public BookingManager _bookingManager { get; set; }
-        public ObservableCollection<Pass> Passes { get; set; }
+        public ObservableCollection<Pass> Passes { get; set; } // Holds a list of all passes creadted by the BookingManager
         private string _searchQuery;
-        private ObservableCollection<Pass> _filteredResults;
+        private ObservableCollection<Pass> _filteredResults; // List to be edited based on user input, which will receive it's data from the Passes list.
         public ICommand SearchCommand { get; set; }
 
         private Pass _selectedPass;
@@ -37,7 +37,7 @@ namespace Lab3.Viewmodels
             }
         }
 
-        public string SearchQuery
+        public string SearchQuery // Container for input from the SearchBar in the view
         {
             get { return _searchQuery; }
             set
@@ -66,7 +66,7 @@ namespace Lab3.Viewmodels
             this._filteredResults = Passes;
         }
         
-        private void BookPass_Click(Pass _selectedPass)
+        private void BookPass_Click(Pass _selectedPass) // Books a pass when clicked in the ListView in the Booking View, and prints out a selected message based on wether a pass was booked or not.
         {
             if (_selectedPass != null)
             {
@@ -74,7 +74,7 @@ namespace Lab3.Viewmodels
             }
         }
 
-        private void SearchName(object parameter)
+        private void SearchName(object parameter) // Searches for passes based on string input, if input is empty, returns all passes
         {
             if (string.IsNullOrEmpty(SearchQuery))
             {
@@ -87,13 +87,13 @@ namespace Lab3.Viewmodels
             }
         }
 
-        private void SearchTime(TimeSpan timeResult)
+        private void SearchTime(TimeSpan timeResult) // Searches for passes based on Time input
         {
             FilteredResults = new ObservableCollection<Pass>(
                 Passes.Where(e => e.Time.TimeOfDay.Hours == timeResult.Hours));
         }
 
-        public void Search(object parameter)
+        public void Search(object parameter) // Takes input from the search bar and invokes either the SearchName function or SearchTime Function depending on the input
         {
             if (DateTime.TryParseExact(SearchQuery, "HH", CultureInfo.InvariantCulture, DateTimeStyles.None, out DateTime result))
             {
@@ -106,7 +106,7 @@ namespace Lab3.Viewmodels
             
         }
 
-        private void BookingNotification(string input)
+        private void BookingNotification(string input) //Used to print a MessageBox based on whether a pass was booked or not
         {
                 MessageBox.Show(input);
         }

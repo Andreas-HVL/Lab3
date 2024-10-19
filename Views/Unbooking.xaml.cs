@@ -17,13 +17,9 @@ using System.Windows.Shapes;
 
 namespace Lab3.Views
 {
-    /// <summary>
-    /// Interaction logic for Unbooking.xaml
-    /// </summary>
     public partial class Unbooking : Page
     {
-       
-        public Unbooking(User user, BookingManager bookingManager)
+        public Unbooking(User user, BookingManager bookingManager) // Injects the user and BookingManager from the MainWindow
         {
             InitializeComponent();
             DataContext = new UnbookingViewModel(user, bookingManager);

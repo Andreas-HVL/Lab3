@@ -17,13 +17,10 @@ using Lab3.Viewmodels;
 
 namespace Lab3.Views
 {
-    /// <summary>
-    /// Interaction logic for Booking.xaml
-    /// </summary>
     public partial class Booking : Page
     {
 
-        public Booking(User user, BookingManager bookingManager)
+        public Booking(User user, BookingManager bookingManager) // Injects the user and BookingManager from the MainWindow
         {
             InitializeComponent();
             DataContext = new BookingViewModel(user, bookingManager);

@@ -13,9 +13,6 @@ using System.Windows.Shapes;
 
 namespace Lab3
 {
-    /// <summary>
-    /// Interaction logic for MainWindow.xaml
-    /// </summary>
     public partial class MainWindow : Window
     {
         public User CurrentUser { get; set; }
@@ -23,8 +20,8 @@ namespace Lab3
         public MainWindow()
         {
             InitializeComponent();
-            CurrentUser = new User("John Doe");
-            _bookingManager = new BookingManager();
+            CurrentUser = new User("John Doe"); // Creates an instance of the user class to hold the list of booked passes for use in the program
+            _bookingManager = new BookingManager(); // Creates an instance of the BookingManager to contain a list of available passes
         }
         private void GoToBooking_Click(object sender, RoutedEventArgs e)
         {

@@ -7,7 +7,7 @@ using System.Windows.Input;
 
 namespace Lab3.Services
 {
-    public class RelayCommand : ICommand
+    public class RelayCommand : ICommand // Implementation of the ICommand Interface to allow simplified Commands, allowing binding of Actions to UI elements without directly coupling UI and Logic
     {
         private readonly Action<object> _execute;
         private readonly Func<object, bool> _canExecute;

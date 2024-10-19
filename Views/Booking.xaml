@@ -19,12 +19,13 @@
             
             </TextBox>
             <Button Width="60" Height="35" Command="{Binding SearchCommand}">
-                Tryk her
+                Search
             </Button>
             <TextBlock VerticalAlignment="Center">
-                Enter hours or workout type
+                Enter hours (HH) or workout type
             </TextBlock>
         </StackPanel>
+        <!-- List of all passes-->
         <StackPanel Grid.Row="1">
             <TextBlock VerticalAlignment="Center" Text="Click a pass to book it"/>
             <ListView Name="PassListView" 

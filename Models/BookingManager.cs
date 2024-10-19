@@ -8,8 +8,9 @@ namespace Lab3.Models
 {
     public class BookingManager
     {
+        // Quick n' dirty creation of random training passes to be available in the BookingManager class
         public List<Pass> PassList { get; set; } = new List<Pass>();
-        private List<string> workoutTypes = new List<string>
+        private List<string> workoutTypes = new List<string> 
         {
             "Pilates",
             "Yoga",
@@ -20,7 +21,7 @@ namespace Lab3.Models
         public BookingManager()
         {
             Random rnd = new Random();
-            for (int i = 0; i <= 10; i++)
+            for (int i = 0; i <= 25; i++)
             {
                 PassList.Add(new Pass(
                     workoutTypes[rnd.Next(0, 5)],
@@ -30,28 +31,5 @@ namespace Lab3.Models
             }
             PassList = PassList.OrderBy(x => x.WorkoutType).ToList();
         }
-
-        
-
-
-
-
-
-
-
-
-
-
-
-
-        /*
-        public List<Pass> SearchPass(string workout, DateTime? time)
-        {
-            return PassList
-                .Where(p => (string.IsNullOrEmpty(workout) || p.Workout == workout)
-                         && (!time.HasValue || p.Time == time.Value))
-                .ToList();
-        }
-        */
     }
 }
