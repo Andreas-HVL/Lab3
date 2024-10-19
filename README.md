@@ -1,5 +1,7 @@
 # Report
 
+As Dummy Data is generated randomly, a rare occurance might happen where no passes have slots avaiable to be booked, please restart the program if this should occur.
+
 This program is written with the expectation of being the followup to a login-function to a Gym's website or a machine located in the gym, so only a single user will be relevant, and as such has been called "John Doe" in the program as a placeholder.
 This User class has a few basic functions allowing it to book and unbook passes, these can easily be expanded by adding more properties or functions to accomodate future requirements.
 
@@ -21,4 +23,6 @@ The RelayCommand and ObservableObject classes are key components of the MVVM pat
 RelayCommand allows binding of UI Actions (Such a Button Clicks) to methods in the ViewModel enabling interaction between components without tightly coupling UI to Logic
 ObservableObject simplifies notifications sent by updated properties via the INotifyPropertyChanged interface, ensurgin that changes made in the ViewModel are reflected in the Views.
 
-
+//
+All actual data is instantiated in the Model classes, and modified in the ViewModels using commands received from the Views. 
+No Backend data is being directly modified in the views and is instead sent via commands from the UI using RelayCommand or similar functionality to ViewModels and their functionalities.
