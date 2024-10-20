@@ -15,7 +15,7 @@ In the future, it could serve as the interface between the program and a databas
 Currently, it instantiates dummy data, but this can be replaced by real-time data fetching in the future.
 
 //
-As the Search Function is being used in 2 places (Booking/Unbooking) already, the base functionality was moved to a separate PassSearchHelper class.
+As the Search Function is being used in 2 places (Booking/Unbooking) already, the base functionality is moved to a separate PassSearchHelper class.
 Here additional functions can be added in the future if needed and can be called anywhere in the program.
 
 //

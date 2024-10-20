@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Lab3.Viewmodels"
         mc:Ignorable="d"
-        Title="MainWindow" Height="800" Width="1020">
+        Title="MainWindow" Height="850" Width="1020">
 
     
     
@@ -15,19 +15,21 @@
     
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="100"/>
+            <ColumnDefinition Width="150"/>
             <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="25"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="35"/>
             <RowDefinition Height="*"/>
+            <RowDefinition Height="25"/>
         </Grid.RowDefinitions>
         
-        <TextBlock Text=".Net Gym" FontSize="22" Grid.Row="0" Grid.Column="0"/>
+        <TextBlock Text=".Net Gym" FontSize="22" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Center"/>
         
         <StackPanel Grid.Row="1" Grid.Column="0">
-            <Button Content="Go to Booking Page" Width="100" Height="30" Click="GoToBooking_Click"/>
-            <Button Content="Go to Unbooking Page" Width="100" Height="30" Click="GoToUnbooking_Click"/>
+            <Button Content="Go to Booking Page" Width="150" Height="50" Click="GoToBooking_Click" FontSize="14"/>
+            <Button Content="Go to Unbooking Page" Width="150" Height="50" Click="GoToUnbooking_Click" FontSize="14"/>
         </StackPanel>
         
         

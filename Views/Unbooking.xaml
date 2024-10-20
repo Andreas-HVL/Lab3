@@ -30,12 +30,12 @@
             <TextBlock VerticalAlignment="Center" Text="Click a pass to unbook it" FontSize="14"/>
             <ListView Name="PassListView" 
                 ItemsSource="{Binding FilteredResults}"
-                SelectedItem="{Binding SelectedPass}">
+                SelectedItem="{Binding SelectedPass}" FontSize="15">
                 <ListView.View>
                     <GridView>
-                        <GridViewColumn Header="Workout" DisplayMemberBinding="{Binding WorkoutType}" />
-                        <GridViewColumn Header="Time" DisplayMemberBinding="{Binding Time}" />
-                        <GridViewColumn Header="Slots" DisplayMemberBinding="{Binding SlotsAvailable}" />
+                        <GridViewColumn Width="100" Header="Workout" DisplayMemberBinding="{Binding WorkoutType}" />
+                        <GridViewColumn Width="100" Header="Time and Date" DisplayMemberBinding="{Binding Time, StringFormat='HH dd/MM/yyyy'}" />
+                        <GridViewColumn Width="45" Header="Slots" DisplayMemberBinding="{Binding SlotsAvailable}" />
                         <GridViewColumn Header="Total Slots" DisplayMemberBinding="{Binding TotalSlots}" />
                     </GridView>
                 </ListView.View>
