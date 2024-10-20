@@ -7,12 +7,12 @@ This User class has a few basic functions allowing it to book and unbook passes,
 
 //
 The Pass class represents a gym training session with basic information such as workout type, time, and available slots. 
-If additional information needs to be tracked (e.g., instructor name, equipment required), the class can easily be extended by adding new properties and methods
+If additional information needs to be tracked (e.g., instructor name, equipment required etc.), the class can easily be expanded by adding new properties and methods
 
 //
 The BookingManager currently serves as a placeholder that generates and manages the list of available passes.
 In the future, it could serve as the interface between the program and a database or API, managing the retrieval and updating of data.
-Currently, it instantiates dummy data, but this can easily be replaced by real-time data fetching in the future.
+Currently, it instantiates dummy data, but this can be replaced by real-time data fetching in the future.
 
 //
 As the Search Function is being used in 2 places (Booking/Unbooking) already, the base functionality was moved to a separate PassSearchHelper class.

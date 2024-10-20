@@ -11,6 +11,7 @@ namespace Lab3.Models
     {
         public static ObservableCollection<Pass> SearchByName(IEnumerable<Pass> passes, string query)
         {
+            // If Input is empty, returns all passes, otherwise returns based on string input
             if (string.IsNullOrEmpty(query))
             {
                 return new ObservableCollection<Pass>(passes);
@@ -22,6 +23,7 @@ namespace Lab3.Models
             }
         }
 
+        // Returns passes based on time-input
         public static ObservableCollection<Pass> SearchByTime(IEnumerable<Pass> passes, TimeSpan time)
         {
             return new ObservableCollection<Pass>(

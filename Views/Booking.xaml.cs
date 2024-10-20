@@ -20,7 +20,7 @@ namespace Lab3.Views
     public partial class Booking : Page
     {
 
-        public Booking(User user, BookingManager bookingManager) // Injects the user and BookingManager from the MainWindow
+        public Booking(User user, BookingManager bookingManager) 
         {
             InitializeComponent();
             DataContext = new BookingViewModel(user, bookingManager);

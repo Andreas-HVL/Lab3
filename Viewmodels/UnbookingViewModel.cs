@@ -32,7 +32,8 @@ namespace Lab3.Viewmodels
             }
         }
 
-        public string SearchQuery // Container for the input from the searchbar
+        // Container for the input from the searchbar
+        public string SearchQuery 
         {
             get { return _searchQuery; }
             set
@@ -60,7 +61,8 @@ namespace Lab3.Viewmodels
             this._filteredResults = BookedPasses;
         }
 
-        private void UnBookPass_Click(Pass _selectedPass) //Unbooks the clicked pass, and updates the list to remove it from the list
+        //Unbooks the clicked pass, and updates the list to remove it from the list
+        private void UnBookPass_Click(Pass _selectedPass) 
         {
             if (_selectedPass != null)
             {
@@ -87,8 +89,8 @@ namespace Lab3.Viewmodels
             }
         }
 
-
-        private void UnbookingNotification(string input) //Used to print a MessageBox based on whether a pass was unbooked or not
+        //Used to print a MessageBox based on whether a pass was unbooked or not
+        private void UnbookingNotification(string input) 
         {
             MessageBox.Show(input);
         }

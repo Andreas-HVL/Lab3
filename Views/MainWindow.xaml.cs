@@ -26,12 +26,12 @@ namespace Lab3
         private void GoToBooking_Click(object sender, RoutedEventArgs e)
         {
             // Navigate to Booking Page
-            MainFrame.NavigationService.Navigate(new Booking(CurrentUser, _bookingManager));
+            MainFrame.NavigationService.Navigate(new Booking(CurrentUser, _bookingManager)); // Injects the user and BookingManager from the MainWindow
         }
         private void GoToUnbooking_Click(object sender, RoutedEventArgs e)
         {
             // Navigate to Unbooking Page
-            MainFrame.NavigationService.Navigate(new Unbooking(CurrentUser, _bookingManager));
+            MainFrame.NavigationService.Navigate(new Unbooking(CurrentUser, _bookingManager)); // Injects the user and BookingManager from the MainWindow
         }
 
     }

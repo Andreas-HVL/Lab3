@@ -8,7 +8,8 @@ using System.Threading.Tasks;
 
 namespace Lab3.Services
 {
-    public class ObservableObject : INotifyPropertyChanged // Implementation of INotifyPropertyChanged interface, letting the UI know when a property's value has changed, so the UI can be updated
+    // Implementation of INotifyPropertyChanged interface, letting the UI know when a property's value has changed, so the UI can be updated
+    public class ObservableObject : INotifyPropertyChanged 
     {
         public event PropertyChangedEventHandler? PropertyChanged;
         public void OnPropertyChanged([CallerMemberName]string propertyName=null)

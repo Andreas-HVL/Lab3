@@ -37,7 +37,8 @@ namespace Lab3.Viewmodels
             }
         }
 
-        public string SearchQuery // Container for input from the SearchBar in the view
+        // Container for input from the SearchBar in the view
+        public string SearchQuery 
         {
             get { return _searchQuery; }
             set
@@ -65,8 +66,9 @@ namespace Lab3.Viewmodels
             this.Passes = new ObservableCollection<Pass>(_bookingManager.PassList);
             this._filteredResults = Passes;
         }
-        
-        private void BookPass_Click(Pass _selectedPass) // Books a pass when clicked in the ListView in the Booking View, and prints out a selected message based on wether a pass was booked or not.
+
+        // Books a pass when clicked in the ListView in the Booking View, and prints out a selected message based on wether a pass was booked or not.
+        private void BookPass_Click(Pass _selectedPass) 
         {
             if (_selectedPass != null)
             {
@@ -88,7 +90,8 @@ namespace Lab3.Viewmodels
             }
         }
 
-        private void BookingNotification(string input) //Used to print a MessageBox based on whether a pass was booked or not
+        //Used to print a MessageBox based on whether a pass was booked or not
+        private void BookingNotification(string input) 
         {
                 MessageBox.Show(input);
         }

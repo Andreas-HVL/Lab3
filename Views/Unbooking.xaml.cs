@@ -19,7 +19,7 @@ namespace Lab3.Views
 {
     public partial class Unbooking : Page
     {
-        public Unbooking(User user, BookingManager bookingManager) // Injects the user and BookingManager from the MainWindow
+        public Unbooking(User user, BookingManager bookingManager) 
         {
             InitializeComponent();
             DataContext = new UnbookingViewModel(user, bookingManager);

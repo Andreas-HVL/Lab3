@@ -21,13 +21,13 @@
             <Button Width="60" Height="35" Command="{Binding SearchCommand}">
                 Search
             </Button>
-            <TextBlock VerticalAlignment="Center">
+            <TextBlock VerticalAlignment="Center" FontSize="14">
                 Enter hours (HH) or workout type
             </TextBlock>
         </StackPanel>
         <!-- List of all passes-->
         <StackPanel Grid.Row="1">
-            <TextBlock VerticalAlignment="Center" Text="Click a pass to book it"/>
+            <TextBlock VerticalAlignment="Center" Text="Click a pass to book it" FontSize="14"/>
             <ListView Name="PassListView" 
                       ItemsSource="{Binding FilteredResults}"
                       SelectedItem="{Binding SelectedPass}">
