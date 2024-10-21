@@ -17,6 +17,7 @@ namespace Lab3.Models
             "Spinning",
             "Dance",
             "Zumba",
+            "Core",
         };
         public BookingManager()
         {
@@ -24,7 +25,7 @@ namespace Lab3.Models
             for (int i = 0; i <= 25; i++)
             {
                 PassList.Add(new Pass(
-                    workoutTypes[rnd.Next(0, 5)],
+                    workoutTypes[rnd.Next(0, 6)],
                     DateTime.Now.AddHours(rnd.Next(1, 5)),
                     rnd.Next(0, 5)
                 ));
