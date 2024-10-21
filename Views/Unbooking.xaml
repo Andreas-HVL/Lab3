@@ -40,7 +40,7 @@
                 <ListView.View>
                     <GridView>
                         <GridViewColumn Width="100" Header="Workout" DisplayMemberBinding="{Binding WorkoutType}" />
-                        <GridViewColumn Width="100" Header="Time and Date" DisplayMemberBinding="{Binding Time, StringFormat='HH dd/MM/yyyy'}" />
+                        <GridViewColumn Width="140" Header="Date and Time" DisplayMemberBinding="{Binding Time, StringFormat='dd/MM/yyyy HH:mm'}" />
                         <GridViewColumn Width="45" Header="Slots" DisplayMemberBinding="{Binding SlotsAvailable}" />
                         <GridViewColumn Header="Total Slots" DisplayMemberBinding="{Binding TotalSlots}" />
                     </GridView>

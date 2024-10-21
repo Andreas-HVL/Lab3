@@ -19,7 +19,6 @@ namespace Lab3.Views
 {
     public partial class Booking : Page
     {
-
         public Booking(User user, BookingManager bookingManager) 
         {
             InitializeComponent();
