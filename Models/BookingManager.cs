@@ -30,7 +30,10 @@ namespace Lab3.Models
                     rnd.Next(0, 5)
                 ));
             }
-            PassList = PassList.OrderBy(x => x.Time).ToList();
+            PassList = PassList
+                .OrderBy(x => x.Time)
+                .ThenBy(x => x.WorkoutType)
+                .ToList();
         }
     }
 }
