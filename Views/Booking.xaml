@@ -28,18 +28,18 @@
         <!-- List of all passes-->
         <StackPanel Grid.Row="1">
             <TextBlock VerticalAlignment="Center" Text="Click a pass to book it" FontSize="14"/>
-            <ListView Name="PassListView" 
-                      ItemsSource="{Binding FilteredResults}"
-                      SelectedItem="{Binding SelectedPass}" FontSize="15">
-                <ListView.View>
-                    <GridView>
-                        <GridViewColumn Width="100" Header="Workout" DisplayMemberBinding="{Binding WorkoutType}" />
-                        <GridViewColumn Width="100" Header="Time and Date" DisplayMemberBinding="{Binding Time, StringFormat='HH dd/MM/yyyy'}" />
-                        <GridViewColumn Width="45" Header="Slots" DisplayMemberBinding="{Binding SlotsAvailable}" />
-                        <GridViewColumn Header="Total Slots" DisplayMemberBinding="{Binding TotalSlots}" />
-                    </GridView>
-                </ListView.View>
-            </ListView>
+                <ListView Name="PassListView" 
+                          ItemsSource="{Binding FilteredResults}"
+                          SelectedItem="{Binding SelectedPass}" FontSize="15" Height="450">
+                    <ListView.View>
+                        <GridView>
+                            <GridViewColumn Width="100" Header="Workout" DisplayMemberBinding="{Binding WorkoutType}" />
+                            <GridViewColumn Width="100" Header="Time and Date" DisplayMemberBinding="{Binding Time, StringFormat='HH dd/MM/yyyy'}" />
+                            <GridViewColumn Width="45" Header="Slots" DisplayMemberBinding="{Binding SlotsAvailable}" />
+                            <GridViewColumn Header="Total Slots" DisplayMemberBinding="{Binding TotalSlots}" />
+                        </GridView>
+                    </ListView.View>
+                </ListView>
         </StackPanel>
     </Grid>
 </Page>

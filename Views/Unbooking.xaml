@@ -30,7 +30,7 @@
             <TextBlock VerticalAlignment="Center" Text="Click a pass to unbook it" FontSize="14"/>
             <ListView Name="PassListView" 
                 ItemsSource="{Binding FilteredResults}"
-                SelectedItem="{Binding SelectedPass}" FontSize="15">
+                SelectedItem="{Binding SelectedPass}" FontSize="15" Height="450">
                 <ListView.View>
                     <GridView>
                         <GridViewColumn Width="100" Header="Workout" DisplayMemberBinding="{Binding WorkoutType}" />
