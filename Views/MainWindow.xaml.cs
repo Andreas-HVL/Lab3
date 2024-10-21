@@ -22,6 +22,7 @@ namespace Lab3
             InitializeComponent();
             CurrentUser = new User("John Doe"); // Creates an instance of the user class to hold the list of booked passes for use in the program
             _bookingManager = new BookingManager(); // Creates an instance of the BookingManager to contain a list of available passes
+            MainFrame.NavigationService.Navigate(new Booking(CurrentUser, _bookingManager)); // Starts the program on the booking page, can be removed and a splash screen added with info
         }
         private void GoToBooking_Click(object sender, RoutedEventArgs e)
         {

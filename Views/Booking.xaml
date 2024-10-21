@@ -10,10 +10,12 @@
       Title="Booking">
     
     <Grid>
+        
         <Grid.RowDefinitions>
             <RowDefinition Height="35"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
+        
         <StackPanel Grid.Row="0" Height="35" VerticalAlignment="Center" HorizontalAlignment="Left" Orientation="Horizontal">
             <TextBox Name="BookingSearch" Width="300" Height="35" TextAlignment="Left" FontSize="12" VerticalContentAlignment="Center" Text="{Binding SearchQuery, UpdateSourceTrigger=PropertyChanged}">
                 <TextBox.InputBindings>
@@ -28,6 +30,7 @@
                 Enter hours (HH) or workout type
             </TextBlock>
         </StackPanel>
+        
         <!-- List of all passes-->
         <StackPanel Grid.Row="1">
             <TextBlock VerticalAlignment="Center" Text="Click a pass to book it" FontSize="14"/>
@@ -44,5 +47,6 @@
                     </ListView.View>
                 </ListView>
         </StackPanel>
+        
     </Grid>
 </Page>
