@@ -33,6 +33,7 @@ namespace Lab3.Models
             PassList = PassList
                 .OrderBy(x => x.Time)
                 .ThenBy(x => x.WorkoutType)
+                .ThenByDescending(x => x.SlotsAvailable)
                 .ToList();
         }
     }
